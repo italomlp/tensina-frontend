@@ -1,7 +1,18 @@
 import React from 'react';
+import { Router } from 'react-router-dom';
+
+import { GlobalStateProvider } from './store';
+import history from './services/history';
+import Routes from './routes';
 
 const App: React.FC = () => {
-  return <h1>TEnsina</h1>;
+  return (
+    <GlobalStateProvider>
+      <Router history={history}>
+        <Routes />
+      </Router>
+    </GlobalStateProvider>
+  );
 };
 
 export default App;
