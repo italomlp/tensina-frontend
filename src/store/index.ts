@@ -2,9 +2,9 @@ import { createGlobalState } from 'react-hooks-global-state';
 
 const initialState = {
   auth: {
-    signed: true,
+    signed: false,
     loading: false,
-    token: '123asdna',
+    token: null,
   },
   user: {
     profile: {
