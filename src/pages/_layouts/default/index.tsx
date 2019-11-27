@@ -1,4 +1,5 @@
 import React from 'react';
+import { Header } from '../../../components';
 
 // import { Container } from './styles';
 
@@ -7,5 +8,10 @@ type Props = {
 };
 
 export default function DefaultLayout({ children }: Props) {
-  return <>{children}</>;
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
 }
